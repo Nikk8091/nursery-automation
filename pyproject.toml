@@ -19,3 +19,4 @@ dev = ["pytest>=8.0", "pytest-mock>=3.12"]
 
 [tool.pytest.ini_options]
 markers = ["requires_gpu: needs a live ComfyUI/GPU instance, skipped in CI"]
+addopts = "-m 'not requires_gpu'"
