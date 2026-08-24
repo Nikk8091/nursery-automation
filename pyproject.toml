@@ -1,0 +1,21 @@
+[project]
+name = "nursery-rhyme-factory"
+version = "0.1.0"
+description = "Autonomous $0 nursery rhyme video factory — Phase 2 implementation"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.5",
+    "httpx>=0.27",
+    "librosa>=0.10",
+    "aubio>=0.4.9",
+    "demucs>=4.0",
+    "ffmpeg-python>=0.2",
+    "google-api-python-client>=2.100",
+    "google-auth-oauthlib>=1.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-mock>=3.12"]
+
+[tool.pytest.ini_options]
+markers = ["requires_gpu: needs a live ComfyUI/GPU instance, skipped in CI"]

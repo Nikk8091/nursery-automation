@@ -1,0 +1,35 @@
+# Python & Testing Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# Environment Variables & Secrets
+.env
+!.env.example
+
+# SQLite Databases & Logs
+*.db
+*.sqlite
+*.sqlite3
+logs/
+*.log
+
+# Generated Media & Batch Outputs
+projects/
+*.mp4
+*.wav
+*.png
+*.jpg
+
+# OS & Editor Specifics
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

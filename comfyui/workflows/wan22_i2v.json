@@ -1,0 +1,9 @@
+{
+  "_comment": "Representative skeleton per docs/specs/spec_04_comfyui_workflows.md §2.3. Replace with the actual Wan 2.2 ComfyUI node pack graph — this shows required node roles only.",
+  "1": {"class_type": "CheckpointLoaderSimple", "inputs": {"ckpt_name": "wan2.2_ti2v_5b.safetensors"}},
+  "2": {"class_type": "LoadImage", "inputs": {"image": "__APPROVED_STILL_PATH__"}},
+  "3": {"class_type": "CLIPTextEncode", "inputs": {"text": "__MOTION_PROMPT__", "clip": ["1", 1]}},
+  "4": {"class_type": "KSampler", "inputs": {"seed": 481920, "motion_strength": 0.8, "model": ["1", 0], "positive": ["3", 0], "conditioning_image": ["2", 0]}},
+  "5": {"class_type": "VAEDecode", "inputs": {"samples": ["4", 0], "vae": ["1", 2]}},
+  "6": {"class_type": "SaveVideo", "inputs": {"video": ["5", 0], "fps": 24, "filename_prefix": "__EPISODE_SCENE_ID__"}}
+}
